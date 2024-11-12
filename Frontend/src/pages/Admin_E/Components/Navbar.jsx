@@ -51,8 +51,6 @@ const Navbar = () => {
 
                 <Link to={'/'} className=' bg-white md:px-10 px-0 lg:px-5 border rounded-br-[42px] h-full'>
                     <img className='h-full object-cover rounded-br-[42px]' src="https://img.freepik.com/premium-vector/health-care-medical-logo-vector-design_990473-2554.jpg" alt="" />
-
-a
           
                 </Link>
           <button onClick={handelmenu} className='w-10 h-10 lg:hidden md:hidden' ><img src={menuico} width={25} height={25} className='active:rotate-180 duration-75 transition-all ease-in'  alt="Menu Icon " /></button>

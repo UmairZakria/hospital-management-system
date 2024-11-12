@@ -33,7 +33,7 @@ app.use(cors({
 app.use(express.json(
 
 ))
-mongoose.connect('mongodb://localhost:27017/client2')
+mongoose.connect('mongodb://localhost:27017/hms')
 
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 

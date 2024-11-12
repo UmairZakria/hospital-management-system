@@ -38,6 +38,7 @@ import Bookappointment from './pages/Bookappointment'
 
 
 import Contact from './pages/Contact'
+import Rigister from './pages/Rigister'
 
 
 import Login from './pages/Login'
@@ -203,6 +204,8 @@ function App() {
 
           <Route path='*' element={<Login />} />
           <Route path='/contact' element={<Contact />} />
+          <Route path='/rigister' element={<Rigister />} />
+
           <Route path='/Booknow' element={<Bookappointment />} />
 
 
