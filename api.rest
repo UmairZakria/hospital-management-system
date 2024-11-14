@@ -1,0 +1,229 @@
+# Base URL (Base Url is a Server Url where all endpoint is created and will be call and make sure that server is running before sending request)
+@baseUrl = http://localhost:3001
+
+# Testing the Root Endpoint
+GET {{baseUrl}}/
+###
+
+# Public: Message Routes
+POST {{baseUrl}}/message
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email": "johndoe@example.com",
+  "message": "This is a test message.",
+  "title": "Test Title"
+}
+###
+
+GET {{baseUrl}}/getmessages
+###
+
+POST {{baseUrl}}/messagedel
+Content-Type: application/json
+
+{
+  "id": "673644038599661b9a43ad87"
+}
+###
+
+# Department Management
+POST {{baseUrl}}/adddep
+Content-Type: application/json
+
+{
+  "name": "Neurology",
+  "description": "Department of Cardiology"
+}
+###
+
+GET {{baseUrl}}/getdep
+###
+
+POST {{baseUrl}}/depdel
+Content-Type: application/json
+
+{
+  "id": ""
+}
+###
+
+# Appointments
+POST {{baseUrl}}/appointment
+Content-Type: application/json
+
+{
+  "formData": {
+    "name": "Jane Doe",
+    "fatherName": "John Doe",
+    "phoneNumber": "1234567890",
+    "maritalStatus": "Single",
+    "gender": "Female",
+    "bloodGroup": "A+",
+    "age": 30,
+    "department": "Cardiology",
+    "doctor": "Dr. Smith",
+    "appointmentDate": "2024-11-15",
+    "appointmentTime": "10:00 AM"
+  }
+}
+###
+
+GET {{baseUrl}}/apointcount
+###
+
+POST {{baseUrl}}/appointdel
+Content-Type: application/json
+
+{
+  "id": "<AppointmentIDHere>"
+}
+###
+
+POST {{baseUrl}}/apointupdate
+Content-Type: application/json
+
+{
+  "id": "673644868599661b9a43ad92",
+  "status": "Cancel"
+}
+###
+
+# Admin Authentication and Operations
+POST {{baseUrl}}/adminrigister
+Content-Type: application/json
+
+{
+  "name": "Admin Name",
+  "email": "admin@example.com",
+  "password": "password123",
+  "phonenumber": "1234567890",
+  "gender": "Male"
+}
+###
+
+POST {{baseUrl}}/adminlogin
+Content-Type: application/json
+
+{
+  "email": "admin@example.com",
+  "password": "password123"
+}
+###
+
+# Add headers for token-based authorization
+@token = <PasteTokenHere>
+
+GET {{baseUrl}}/dashboard
+Authorization: Bearer {{token}}
+###
+
+POST {{baseUrl}}/adminupdate
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "id": "<AdminIDHere>",
+  "name": "Updated Name",
+  "email": "updated@example.com",
+  "phonenumber": "0987654321"
+}
+###
+
+POST {{baseUrl}}/adminpass
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "id": "<AdminIDHere>",
+  "password": "oldpassword",
+  "newpassword": "newpassword123"
+}
+###
+
+# Doctor Management
+POST {{baseUrl}}/docrigister
+Content-Type: application/json
+
+{
+  "name": "Dr. Alice",
+  "email": "alice@example.com",
+  "password": "securepassword",
+  "phonenumber": "1122334455",
+  "gender": "Female",
+  "spcialization": "Neurology",
+  "age": 45,
+  "bg": "B+",
+  "address": "123 Medical Road"
+}
+###
+
+GET {{baseUrl}}/getdoctor
+###
+
+POST {{baseUrl}}/docupdate
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "id": "<DoctorIDHere>",
+  "name": "Dr. Alice Updated",
+  "email": "aliceupdated@example.com",
+  "phonenumber": "9988776655",
+  "spcialization": "Updated Neurology",
+  "age": 46
+}
+###
+
+POST {{baseUrl}}/docdelete
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "id": "<DoctorIDHere>"
+}
+###
+
+# Receptionist Management
+POST {{baseUrl}}/reprigister
+Content-Type: application/json
+
+{
+  "name": "Receptionist Bob",
+  "email": "bob@example.com",
+  "password": "receptionistpass",
+  "phonenumber": "5566778899",
+  "gender": "Male",
+  "shiftTiming": "Morning",
+  "age": 30,
+  "bg": "O-",
+  "address": "123 Reception Lane"
+}
+###
+
+GET {{baseUrl}}/getrep
+###
+
+POST {{baseUrl}}/repupdate
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "id": "<ReceptionistIDHere>",
+  "name": "Updated Bob",
+  "email": "updatedbob@example.com",
+  "phonenumber": "6677889900",
+  "shiftTiming": "Evening",
+  "age": 31
+}
+###
+
+POST {{baseUrl}}/repdelete
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "id": "<ReceptionistIDHere>"
+}
+###
