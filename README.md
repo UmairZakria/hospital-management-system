@@ -4,14 +4,44 @@ A comprehensive Hospital Management System built with React.js frontend and Node
 
 ## 📋 Table of Contents
 
+- [Screenshots](#screenshots)
 - [Features](#features)
 - [Technology Stack](#technology-stack)
 - [Project Structure](#project-structure)
 - [Installation & Setup](#installation--setup)
 - [Usage](#usage)
 - [API Documentation](#api-documentation)
-- [Screenshots](#screenshots)
 - [Contributing](#contributing)
+
+## 📸 Screenshots
+
+### 👨‍💼 Admin Panel
+![Admin Panel](Pics/AdminPanel.jpeg)
+
+### 🏥 Department Management
+![Department Management](Pics/DepartmentManagement.jpeg)
+
+### 👨‍⚕️ Doctor Management
+![Doctor Management](Pics/Doctormanage.jpeg)
+
+
+### 👩‍💼 Receptionist Panel
+![Receptionist Panel](Pics/receptionist.jpeg)
+
+### 🏠 Receptionist Home
+![Receptionist Home](Pics/receptionisthome.jpeg)
+
+### 👨‍⚕️ Doctor Settings
+![Doctor Settings](Pics/doctorsetting.jpeg)
+
+### 💬 Messages Management
+![Messages Management](Pics/Messages%20Management%20Page.jpeg)
+
+### 📞 Contact Page
+![Contact Page](Pics/Contact.jpeg)
+
+### ⚙️ Admin Settings
+![Admin Settings](Pics/AdminSetting.jpeg)
 
 ## ✨ Features
 
@@ -177,37 +207,8 @@ The backend provides RESTful APIs for all operations. Key endpoints include:
 
 For complete API documentation, see the `api.rest` file in the project root.
 
-## 📸 Screenshots
 
-### 🏠 Home Page
-![Home Page](Pics/About.jpeg)
 
-### 👨‍💼 Admin Panel
-![Admin Panel](Pics/AdminPanel.jpeg)
-
-### ⚙️ Admin Settings
-![Admin Settings](Pics/AdminSetting.jpeg)
-
-### 🏥 Department Management
-![Department Management](Pics/DepartmentManagement.jpeg)
-
-### 👨‍⚕️ Doctor Management
-![Doctor Management](Pics/Doctormanage.jpeg)
-
-### 👨‍⚕️ Doctor Settings
-![Doctor Settings](Pics/doctorsetting.jpeg)
-
-### 👩‍💼 Receptionist Panel
-![Receptionist Panel](Pics/receptionist.jpeg)
-
-### 🏠 Receptionist Home
-![Receptionist Home](Pics/receptionisthome.jpeg)
-
-### 💬 Messages Management
-![Messages Management](Pics/Messages%20Management%20Page.jpeg)
-
-### 📞 Contact Page
-![Contact Page](Pics/Contact.jpeg)
 
 ## 🤝 Contributing
 
